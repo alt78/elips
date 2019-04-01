@@ -11,8 +11,7 @@ def printGr(a,b):
 def summ(x1, y1, x2, y2, fp):
     t1=y2-y1
     t2=x2-x1
-    if t2==0 or t1==0:
-        return 'besk' ''
+
 
     x3 = ((t1*mod_inverse(t2,fp)%fp)**2-(x1+x2))%fp
     y3 = (-y1+(t1*mod_inverse(t2,fp)%fp)*(x1-x3))%fp
@@ -95,7 +94,12 @@ if __name__ == "__main__":
             x2= int((input("Ведите x2: ")))
             y2=int((input("Ведите y2: ")))
             fp = int((input("Ведите поле: ")))
-            print(summ(x1, y1, x2, y2, fp))
+            t1 = y2 - y1
+            t2 = x2 - x1
+            if (t1 or t2)==0:
+                print('besk')
+            else:
+                print(summ(x1, y1, x2, y2, fp))
 
         elif case == '5':
             x1 = int((input("Ведите x1: ")))
