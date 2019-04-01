@@ -96,7 +96,7 @@ if __name__ == "__main__":
             fp = int((input("Ведите поле: ")))
             t1 = y2 - y1
             t2 = x2 - x1
-            if (t1 or t2)==0:
+            if t1 or t2==0:
                 print('besk')
             else:
                 print(summ(x1, y1, x2, y2, fp))
